@@ -1,0 +1,31 @@
+{
+  "name": "car-ing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^14.0.3",
+    "@types/navermaps": "^3.7.3",
+    "next": "14.0.3",
+    "next-images": "^1.8.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.12.0",
+    "styled-components": "^6.1.1",
+    "styled-reset": "^4.5.1",
+    "swr": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.32",
+    "babel-plugin-styled-components": "^2.1.4",
+    "typescript": "^5"
+  }
+}
