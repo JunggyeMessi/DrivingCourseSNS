@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderMenuList from './HeaderMenuList';
 
-const Box = styled.div`
+const Box = styled.nav`
     display: flex;
 
 `;

@@ -27,6 +27,7 @@ const region: string[] = [
   "경상/대구/울산",
   "부산",
   "제주",
+  
 ];
 
 const customAlign: string[] = [

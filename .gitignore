@@ -28,3 +28,4 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
+node_modules

@@ -4,6 +4,8 @@ import "../styles/style.css";
 import GlobalStyle from "../styles/GlobalStyle";
 import { theme } from "../styles/theme";
 import Script from "next/script";
+import { Provider } from "next-auth/providers/index";
+import { SessionProvider } from "next-auth/react";
 
 declare global {
   interface Window {
@@ -13,14 +15,16 @@ declare global {
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Component {...pageProps} />
-      <Script
-        strategy="beforeInteractive"
-        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
-      ></Script>
-    </ThemeProvider>
+    <SessionProvider session={pageProps.session}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+        <Script
+          strategy="beforeInteractive"
+          src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
+        ></Script>
+      </ThemeProvider>
+    </SessionProvider>
   );
 }
 
